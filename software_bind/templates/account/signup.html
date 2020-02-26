@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+  <h1>Sign Up</h1>
+  <form method="POST" id="post-form" action="/create_post/">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" name="btn btn-default" value="Sign Up" id="sign" >
+
+  </form>
+  <!--<script>
+  console.log(1);
+  console.log($('#post-form'))
+  $('#post-form').on('submit',function(event){
+    event.preventDefault();
+    console.log("form submitted!")
+    create_post();
+  });
+</script>-->
+  <script src="/static/javascript/main.js"></script>
+</div>
+
+
+{% endblock %}
